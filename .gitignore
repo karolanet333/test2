@@ -1,0 +1,23 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# compiled output
+/.git
+/.vs
+/packages
+/Publish
+/SOFCO.Api/obj
+/SOFCO.Api/App_Data/*
+/SOFCO.Api/bin
+/SOFCO.Api/ImageStorage/*
+
+/SOFCO.Core/obj
+/SOFCO.Core/bin
+
+/SOFCO.Models/obj
+/SOFCO.Models/bin
+
+/SOFCO.Repositories/obj
+/SOFCO.Repositories/bin
+
+/SOFCO.Service/obj
+/SOFCO.Service/bin
