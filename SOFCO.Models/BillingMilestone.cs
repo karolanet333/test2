@@ -81,5 +81,11 @@ namespace SOFCO.Models
         public Province ImpProv_3 { get; set; }
         [ForeignKey("ImpProv_3")]
         public int? IdImpProv_3 { get; set; }
+
+        public string CurrState { get; set; }
+
+        public SolFacState SolFacState { get; set; }
+        [ForeignKey("SolFacState")]
+        public int IdSolFacState { get; set; }
     }
 }

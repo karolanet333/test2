@@ -196,8 +196,11 @@
     <Compile Include="Controllers\PaymentMethodController.cs" />
     <Compile Include="Controllers\ProjectController.cs" />
     <Compile Include="Controllers\ProvinceController.cs" />
+    <Compile Include="Controllers\SolFacHistController.cs" />
+    <Compile Include="Controllers\SolFacStateController.cs" />
     <Compile Include="Controllers\StatusController.cs" />
     <Compile Include="Controllers\UploadFileController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -266,6 +269,10 @@
     <ProjectReference Include="..\SOFCO.Models\SOFCO.Models.csproj">
       <Project>{b5477276-4d83-4b9c-891f-1a69f8e56575}</Project>
       <Name>SOFCO.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SOFCO.Repositories\SOFCO.Repositories.csproj">
+      <Project>{7da281c1-4764-47df-bf4e-efc7486bece3}</Project>
+      <Name>SOFCO.Repositories</Name>
     </ProjectReference>
     <ProjectReference Include="..\SOFCO.Service\SOFCO.Service.csproj">
       <Project>{a7ee8d47-641b-44a4-b875-b7aaa63c1fd6}</Project>

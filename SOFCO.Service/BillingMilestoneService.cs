@@ -19,9 +19,10 @@ namespace SOFCO.Service
             base._repository = _billingMilestoneRepository = new BillingMilestoneRepository();
         }
 
-        public IEnumerable<BillingMilestone> GetByIdProject(int id)
+        public IEnumerable<BillingMilestone> GetAll(int idCustomer, int idService, int idProject)
         {
-            return _billingMilestoneRepository.GetByIdProject(id);
+            var rpta = _billingMilestoneRepository.GetAll(idCustomer, idService, idProject);
+            return rpta;
         }
 
         public override void SaveOrUpdate(BillingMilestone entity)

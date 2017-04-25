@@ -7,8 +7,7 @@ using SOFCO.Models;
 
 namespace SOFCO.Core.Services
 {
-    public interface IBillingMilestoneService : IService<BillingMilestone>
+    public interface IUserService : IService<User>
     {
-        IEnumerable<BillingMilestone> GetAll(int idCustomer, int idService, int idProject);
     }
 }

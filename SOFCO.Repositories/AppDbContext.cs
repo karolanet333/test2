@@ -21,6 +21,12 @@ namespace SOFCO.Repositories
         public DbSet<DocumentType> DocumentTypes { get; set; }
         public DbSet<CurrencySign> CurrencySigns { get; set; }
 
+        public DbSet<User> Users { get; set; }
+        public DbSet<Profile> Profiles { get; set; }
+
+        public DbSet<SolFacState> SolFacStates { get; set; }
+        public DbSet<SolFacHist> SolFacHists { get; set; }
+
         public AppDbContext()
             : base()
         {

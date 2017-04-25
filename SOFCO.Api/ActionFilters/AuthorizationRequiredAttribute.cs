@@ -13,8 +13,9 @@ namespace SOFCO.Api.ActionFilters
     {
         public override void OnActionExecuting(HttpActionContext filterContext)
         {
+            /*
             string token = System.Configuration.ConfigurationManager.AppSettings["Token"];
-
+            
             
             if (filterContext.Request.Headers.Contains("Authorization") && filterContext.Request.Headers.GetValues("Authorization").Contains(token))
             {
@@ -31,9 +32,9 @@ namespace SOFCO.Api.ActionFilters
             {
                 filterContext.Response = new HttpResponseMessage(HttpStatusCode.Unauthorized);
             }
-
+            
             base.OnActionExecuting(filterContext);
-
+            */
         }
     }
 }

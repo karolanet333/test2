@@ -7,8 +7,7 @@ using SOFCO.Models;
 
 namespace SOFCO.Core.Repositories
 {
-    public interface IBillingMilestoneRepository : IRepository<BillingMilestone>
+    public interface IUserRepository : IRepository<User>
     {
-        IEnumerable<BillingMilestone> GetAll(int idCustomer, int idService, int idProject);
     }
 }

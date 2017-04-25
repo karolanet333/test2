@@ -6,6 +6,9 @@ using System.Web.Http.Cors;
 using SOFCO.Models;
 using SOFCO.Core.Services;
 using SOFCO.Api.ActionFilters;
+using Newtonsoft.Json.Linq;
+using SOFCO.Repositories.Repositories;
+using SOFCO.Models.DTO;
 
 namespace SOFCO.Api.Controllers
 {
@@ -13,14 +16,16 @@ namespace SOFCO.Api.Controllers
     [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class BillingMilestoneController : ApiController
     {
-        IBillingMilestoneService _milestoneService = new SOFCO.Service.BillingMilestoneService();
-        
+        //IBillingMilestoneService _milestoneService = new SOFCO.Service.BillingMilestoneService();
+        BillingMilestoneRepository repo = new BillingMilestoneRepository();
+
         [HttpGet]
-        [System.Web.Http.ActionName("getByIdProject")]
-        [Route("api/getByIdProject")]
-        public IEnumerable<BillingMilestone> GetByIdProject(int id)
+        [System.Web.Http.ActionName("getAll")]
+        [Route("api/getAll")]
+        public IEnumerable<BillingMilestone> GetAll(int idCustomer, int idService, int idProject)
         {
-            return _milestoneService.GetByIdProject(id);
+            var rpta = repo.GetAll(idCustomer, idService, idProject);
+            return rpta;
         }
 
         [HttpGet]
@@ -28,15 +33,18 @@ namespace SOFCO.Api.Controllers
         [Route("api/getById")]
         public BillingMilestone GetById(int id)
         {
-            return _milestoneService.GetById(id);
+            return repo.GetById(id);
         }
 
         [AcceptVerbs("Post", "Put")]
-        public HttpResponseMessage Post(BillingMilestone bm)
+        public HttpResponseMessage Post([FromBody] BillingMilestoneDTO dto)
         {
+            //BillingMilestone bm = data["BillingMilestone"].ToObject<BillingMilestone>();
+            //int idUser = int.Parse(data["IdUser"].ToString());
+
             if (ModelState.IsValid)
             {
-                _milestoneService.SaveOrUpdate(bm);
+                repo.SaveOrUpdate2(dto.BillingMilestone, dto.IdUser, dto.Simple, dto.Update, dto.Rechazar);
                 return new HttpResponseMessage(HttpStatusCode.OK);
             }
             else

@@ -51,7 +51,10 @@
     <Compile Include="Repositories\IProjectRepository.cs" />
     <Compile Include="Repositories\IProvinceRepository.cs" />
     <Compile Include="Repositories\IRepository.cs" />
+    <Compile Include="Repositories\ISolFacStateRepository.cs" />
+    <Compile Include="Repositories\ISolFactHistRepository.cs" />
     <Compile Include="Repositories\IStatusRepository.cs" />
+    <Compile Include="Repositories\IUserRepository.cs" />
     <Compile Include="Services\IBillingMilestoneService.cs" />
     <Compile Include="Services\ICurrencySignService.cs" />
     <Compile Include="Services\ICustomerService.cs" />
@@ -61,7 +64,10 @@
     <Compile Include="Services\IProjectService.cs" />
     <Compile Include="Services\IProvinceService.cs" />
     <Compile Include="Services\IService.cs" />
+    <Compile Include="Services\ISolFacHistService.cs" />
+    <Compile Include="Services\ISolFacStateService.cs" />
     <Compile Include="Services\IStatusService.cs" />
+    <Compile Include="Services\IUserService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SOFCO.Models\SOFCO.Models.csproj">
